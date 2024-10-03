@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
 class MyTextField extends StatelessWidget {
-  const MyTextField({super.key});
+  final String hintText;
+  final int maxlines;
+  const MyTextField({super.key, required this.hintText, this.maxlines = 1});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      maxLines: maxlines,
       cursorColor: Colors.deepPurple,
       decoration: InputDecoration(
-        hintText: 'Title',
+        hintText: hintText,
+
         //hintStyle: const TextStyle(color: Colors.deepPurple),
         border: myBorder(),
         focusedBorder: myBorder(Colors.deepPurple),
