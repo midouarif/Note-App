@@ -32,7 +32,7 @@ class NoteItem extends StatelessWidget {
                 'Flutter tips for beginners with Midou',
                 style: TextStyle(
                   color: Colors.black.withOpacity(.5),
-                  fontSize: 20,
+                  fontSize: 18,
                 ),
               ),
             ),
