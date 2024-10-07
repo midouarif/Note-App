@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
   final void Function()? onTap;
-  const MyButton({super.key, this.onTap});
+  final bool isLoading;
+  const MyButton({super.key, this.onTap, this.isLoading = false});
 
   @override
   Widget build(BuildContext context) {
@@ -15,14 +16,18 @@ class MyButton extends StatelessWidget {
           color: Colors.deepPurple,
           borderRadius: BorderRadius.circular(10),
         ),
-        child: const Center(
-          child: Text(
-            'Add',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-            ),
-          ),
+        child: Center(
+          child: isLoading
+              ? const CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                )
+              : const Text(
+                  'Add',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
+                ),
         ),
       ),
     );
