@@ -3,7 +3,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:note_app/cubits/note/note_cubit.dart';
 import 'package:note_app/model/note_model.dart';
-import 'package:note_app/views/edit_note_view.dart';
 import 'package:note_app/views/widgets/note_item.dart';
 
 class NotesList extends StatelessWidget {
